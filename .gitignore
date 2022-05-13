@@ -4,3 +4,5 @@ fission
 RealEstate_Georgia.csv
 todo.txt
 fission-journal
+__pycache__/
+fission.dd
