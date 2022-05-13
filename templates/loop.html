@@ -1,0 +1,49 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <table>
+        <thead>
+            <h3>Insight</h3>
+            <tr>
+                <th>Low</th>
+                <th>High</th>
+                <th>Average</th>
+                <th>Std Dev</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{stats['low']}}</td>
+                <td>{{stats['high']}}</td>
+                <td>{{stats['mean']}}</td>
+                <td>{{stats['std']}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="listingtable">
+                    <thead>
+                        <tr>
+                            <th>Price</th>
+                            <th>SqFt</th>
+                            <th>Bed</th>
+                            <th>Bath</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in listings %}
+                            <tr>
+                                <td>${{ x['price'] }}<td>
+                                <td>{{ x['area'] }}<td>
+                                <td>{{ x['bed'] }}<td>
+                                <td>{{ x['bath'] }}<td>
+                                <td>{{ x['address'] }} 
+                                    {{ x['city'] }}  
+                                    {{ x['zipcode'] }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+    
+{% endblock %}

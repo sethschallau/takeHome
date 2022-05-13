@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Georgia Real Estate</title>
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Georgia Real Estate</h1>
+    <div>
+        <form action="/" method="post">
+            <label for="zipcode">Enter ZipCode:</label>
+            <input type="text" id="zipcode" name="text">
+            <input type="submit">
+        </form>
+    </div>
+    <div class="list">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

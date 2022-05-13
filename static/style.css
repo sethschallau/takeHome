@@ -1,0 +1,17 @@
+body{
+	background-color: #5C5F58;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
+.list{
+	background-color: #DCE1E3;
+	width: 70%;
+}
+.listings{
+	margin-left: 10px;
+	display:table-header-group;
+	border-bottom: 10px;
+}
+.listingtable{
+
+}
