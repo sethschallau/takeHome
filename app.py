@@ -14,7 +14,7 @@ def get_db_connection():
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return render_template('home.html', message="Enter a zipcode")
 
 @app.route('/', methods=['POST'])
 def index_post():
@@ -34,6 +34,10 @@ def index_post():
     posts = conn.execute(query).fetchall()
     conn.close()
     
+    
+    if len(posts) < 1:
+        return render_template('home.html', message="No listings in that zipcode")
+
     prices = []
     for listing in posts:
         prices.append(listing['price'])
